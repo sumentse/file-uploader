@@ -1,0 +1,33 @@
+html
+	head
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet")
+		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
+	body
+		h2(class="text-center") Files
+		div(class="container")
+			table(class="table table-condensed")
+				thead
+					tr
+						th Name
+						th Last Modified
+						th Action
+				tbody
+					for item in files
+						tr
+							td
+								a(href=item.name, target="_blank") #{item.name}
+							td
+								span #{item.mtime}
+							td
+								form(method="POST" action="/delete/#{item.name}")
+									button(type="submit" class="btn btn-danger") 
+										i(class="fa fa-trash-o") 
+										span  DELETE
+			span #{files.length} items
+			
+			div
+				h4 To upload more files go 
+					a(href="/") here
+
+				
+

@@ -1,0 +1,19 @@
+html
+	head
+		link(rel="stylesheet",type="text/css", href="main.css")
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", type="text/css", rel="stylesheet")
+		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", type="text/css", rel="stylesheet")
+
+	body
+		div(class="container")
+			h2(class="text-center") 
+				i(class="fa fa-cloud text-primary") 
+				span  Cloudbox
+			
+			form(method="post",class="dropzone",enctype="multipart/form-data",action="/upload")
+			br
+			h4 To view uploaded files go 
+				a(href="files") here
+
+		script(type='text/javascript', src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.0.1/dropzone.js")
+
