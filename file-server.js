@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use("/files", express.static(path.join(__dirname, 'uploads')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-const port = 1275;
+const port = 3000;
 
 app.get('/', (req, res)=>{
   res.render('index');
